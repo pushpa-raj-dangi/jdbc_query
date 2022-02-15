@@ -1,0 +1,21 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\Pushpa Raj Dangi\\Downloads\\mysql-connector-java-8.0.27 (1)\\mysql-connector-java-8.0.27\\mysql-connector-java-8.0.27.jar"
+  ],
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "mycon",
+      "username": "root",
+      "database": "students",
+      "password": ""
+    }
+  ]
+}
