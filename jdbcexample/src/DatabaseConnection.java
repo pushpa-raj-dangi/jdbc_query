@@ -74,4 +74,25 @@ public class DatabaseConnection {
 
     }
 
+    public void Insensitive() throws SQLException {
+        Statement stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+        String query = "SELECT * FROM STUDENT";
+
+        ResultSet rs = stm.executeQuery(query);
+
+        System.out.println("In forward direction");
+
+        while (rs.next()) {
+            System.out.print(rs.getString("id") + "\t\t");
+            System.out.print(rs.getString("name") + "\t\t\t\t\t\t\t\t");
+            System.out.println(rs.getString("address"));
+        }
+
+        rs.absolute(2);
+        rs.updateString(2, "gopal raj");
+        rs.updateRow();
+        System.out.println("Second record");
+        System.out.println(rs.getInt(1) + " " + rs.getString(2));
+    }
+
 }
